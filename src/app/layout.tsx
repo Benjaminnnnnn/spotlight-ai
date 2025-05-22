@@ -4,7 +4,6 @@ import {
   SignedOut,
   SignInButton,
   SignUpButton,
-  UserButton,
 } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
@@ -38,11 +37,10 @@ export default function RootLayout({
           >
             <header className="flex justify-end items-center p-4 gap-4 h-16">
               <SignedOut>
-                <SignInButton />
                 <SignUpButton />
               </SignedOut>
               <SignedIn>
-                <UserButton />
+                <SignInButton />
               </SignedIn>
             </header>
             {children}
